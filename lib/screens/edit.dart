@@ -1,3 +1,6 @@
+import 'dart:js_interop';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:split_the_bill/models/guest.dart';
 
@@ -25,6 +28,16 @@ class _EditScreenState extends State<EditScreen> {
     }
 
     super.initState();
+  }
+
+  Future addOrEditUser(String name, String amountSpent, String items) async{
+    await FirebaseFirestore.instance.collection("guests").add({
+      "name": name,
+      "amountSpent": amountSpent,
+      "items": items,
+
+    });
+
   }
 
   @override
@@ -94,7 +107,8 @@ class _EditScreenState extends State<EditScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pop(
-              context, [_nameController.text, _amountController.text, _itemsController.text]);
+              // context, [_nameController.text, _amountController.text, _itemsController.text]);
+              context, addOrEditUser(_nameController.text, _amountController.text, _itemsController.text));
         },
         elevation: 10,
         backgroundColor: Colors.grey.shade800,

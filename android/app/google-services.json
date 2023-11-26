@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "530693066891",
+    "project_id": "split-the-bill-flutter-99eeb",
+    "storage_bucket": "split-the-bill-flutter-99eeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530693066891:android:c85697fbf58cb1e038448e",
+        "android_client_info": {
+          "package_name": "com.example.split_the_bill"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv9ZCF_K58kaPBzDnWCwMfM3KEGr0aOFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

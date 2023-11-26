@@ -24,11 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
     filteredGuests = sampleGuests;
   }
 
-  List<Guest> sortGuestsByName(List<Guest> guests) {
+  List<Guest> sortGuestsByModifiedTime(List<Guest> guests) {
     if (sorted) {
-      guests.sort((a, b) => a.name.compareTo(b.name));
+      guests.sort((a, b) => a.modifiedTime.compareTo(b.modifiedTime));
     } else {
-      guests.sort((b, a) => a.name.compareTo(b.name));
+      guests.sort((b, a) => a.modifiedTime.compareTo(b.modifiedTime));
     }
 
     sorted = !sorted;
@@ -95,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     onPressed: () {
                       setState(() {
                         filteredGuests =
-                            sortGuestsByName(filteredGuests);
+                            sortGuestsByModifiedTime(filteredGuests);
                       });
                     },
                     padding: EdgeInsets.all(0),

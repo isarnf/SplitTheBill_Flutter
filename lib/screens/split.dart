@@ -1,10 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:split_the_bill/constants/colors.dart';
 import 'package:split_the_bill/models/guest.dart';
-import 'package:split_the_bill/screens/edit.dart';
 
 class SplitBill extends StatefulWidget {
   const SplitBill({super.key});

@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:split_the_bill/firebase_options.dart';
 import 'package:split_the_bill/screens/home.dart';
-import 'package:split_the_bill/screens/split.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future main () async { 
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
   runApp(const MyApp());
 }
 
