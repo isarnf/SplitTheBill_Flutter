@@ -30,7 +30,7 @@ class _SplitBillState extends State<SplitBill> {
     
   }
 
-  List<Guest> sortGuestsByModifiedTime(List<Guest> guests) {
+  List<Guest> sortGuestsByName(List<Guest> guests) {
     if (sorted) {
       guests.sort((a, b) => a.name.compareTo(b.name));
     } else {
@@ -92,7 +92,7 @@ class _SplitBillState extends State<SplitBill> {
                     onPressed: () {
                       setState(() {
                         filteredGuests =
-                            sortGuestsByModifiedTime(filteredGuests);
+                            sortGuestsByName(filteredGuests);
                       });
                     },
                     padding: EdgeInsets.all(0),
